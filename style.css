@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #7a0a62;
+}
+
+.header{
+    text-align: center;
+    padding: 50px, 0;
+}
+
+.header p{
+    font-size: 1.2em;
+}
+
+.header h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #bd208e;
+    font-size: 5rem;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow:20px 10px 5px #000000;
+}
+
+
+
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background:(0,0,0,0);
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #a70075;
+    font-size: 1.3rem;
+    
+}
+
+nav a:hover{
+    color: #ff0095;
+    text-decoration: underline;
+    animation: letrasanimacao 0.1s;
+}
+
+@keyframes letrasanimacao{
+    0%{
+        font-size: 18px;
+    }
+    100%{
+        font-size: 20px;  
+    }
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap; /*Se diminuir a tela, faz a quebra de linha*/
+    justify-content: center;
+    padding: 20px;
+    background:linear-gradient(to right,#f37bcb, #7a0a62)
+}
+
+.box{
+    background-color: #dfa2c4;
+    padding: 20px;
+    width: 70%;
+    margin: 10px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.box h2{
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.box p{
+    flex: 1 1 200px;
+    margin: 10px;
+    font-size: 18px;
+}
+.box p::selection{
+    background-color: blueviolet;
+    color: crimson;
+}
+
+.box2{
+    padding: 20px;
+    width: 60%;
+    color: #000000;
+}
+
+.box2 h2{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.box2 p{
+    font-size: 18px;
+}
+
+.box3{
+    background-color: #dfa2c4;
+    padding: 20px;
+    width: 70%;
+    margin: 10px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.box3 h2{
+    text-align: center;
+    width: 100%;
+}
+
+.box3 p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.footer{
+    background-color: #7a0a62;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.parallax1{
+    background-image: url(https://miro.medium.com/v2/resize:fit:1155/1*k298ab1-ZHK9ib8vdAPGag.jpeg);
+}
+.parallax2{
+    background-image: url(https://forbes.com.br/wp-content/uploads/2023/11/mulher-taylor-swift-eras-tour.jpg);
+}
+.parallax3{
+    background-image: url(https://forbes.com.br/wp-content/uploads/2024/02/Taylor-Swift-Getty.jpg);
+}
+
+.parallax1{
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.parallax2{
+    height: 70vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.parallax3{
+    height: 70vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 9%;
+    left: 0;
+    right: 0;
+    bottom: 8%;
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width:768px){
+    .box{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .box p{
+        font-size: 1.4rem;
+    }
+    .box2{
+        width: 100%;
+    }
+    .box2 h2{
+        font-size: 2.5rem;
+    }
+    .box2 p{
+        font-size: 1.4rem;
+    }
+    .box3{
+        width: 100%;
+    }
+    .box3 h2{
+        font-size: 2.5rem;
+    }
+
+    .box3 p{
+        font-size: 1.4rem;
+    }
+}
